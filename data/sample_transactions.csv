@@ -1,0 +1,13 @@
+date,description,category,amount,merchant,transaction_type
+2026-08-02,Lunch order,Food,350.00,Swiggy,debit
+2026-08-05,Monthly salary,Income,50000.00,Acme Corp,credit
+2026-08-07,Groceries,Groceries,1200.50,BigBasket,debit
+2026-08-12,Movie tickets,Entertainment,600.00,PVR,debit
+2026-08-18,Dinner,Food,800.00,Zomato,debit
+2026-08-25,Electricity bill,Utilities,1500.00,TNEB,debit
+2026-09-01,Lunch order,Food,420.00,Swiggy,debit
+2026-09-05,Monthly salary,Income,50000.00,Acme Corp,credit
+2026-09-09,Groceries,Groceries,1350.00,BigBasket,debit
+2026-09-14,Online shopping,Shopping,2200.00,Amazon,debit
+2026-09-20,Laptop purchase,Electronics,85000.00,Amazon,debit
+2026-09-22,Coffee,Food,250.00,Starbucks,debit
