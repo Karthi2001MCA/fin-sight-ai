@@ -1,7 +1,8 @@
 import datetime
 from decimal import Decimal
+from typing import Any
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class UploadResponse(BaseModel):
@@ -32,3 +33,13 @@ class AnalyticsSummary(BaseModel):
     by_category: list[NameTotal]
     by_month: list[NameTotal]
     top_merchants: list[NameTotal]
+
+
+class ChatRequest(BaseModel):
+    question: str = Field(min_length=3, max_length=500)
+
+
+class ChatResponse(BaseModel):
+    answer: str
+    sql: str
+    rows: list[dict[str, Any]]
