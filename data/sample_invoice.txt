@@ -1,0 +1,26 @@
+INVOICE #INV-2026-0912
+
+From: CloudNest Hosting Pvt. Ltd., Bengaluru
+To: Karthik B, Chennai
+Invoice date: 12 September 2026
+
+Services
+- Web hosting (Business plan), September 2026: Rs. 4,500.00
+- Domain renewal (1 year): Rs. 1,200.00
+- SSL certificate: Rs. 800.00
+Subtotal: Rs. 6,500.00
+GST (18%): Rs. 1,170.00
+Total due: Rs. 7,670.00
+
+Payment terms
+Payment is due within 15 days of the invoice date (by 27 September 2026).
+A late fee of 2% per month will be charged on overdue amounts.
+Accepted payment methods: UPI, bank transfer (NEFT/IMPS) and credit card.
+
+Cancellation and refunds
+Hosting can be cancelled with 30 days' written notice.
+Refunds are given only for unused full months of prepaid service.
+Domain and SSL charges are non-refundable.
+
+Support
+Support is available 24x7 at support@cloudnest.example.

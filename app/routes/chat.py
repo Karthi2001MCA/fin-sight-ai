@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from app.database import get_db
 from app.schemas import ChatRequest, ChatResponse
 from app.services.chat import answer_question
+from app.services.rag import answer_document_question
 from app.services.sql_validator import UnsafeSQLError
 
 router = APIRouter(prefix="/chat", tags=["Chat"])
@@ -14,9 +15,13 @@ router = APIRouter(prefix="/chat", tags=["Chat"])
 @router.post("", response_model=ChatResponse)
 def chat(request: ChatRequest, db: Session = Depends(get_db)):
     try:
+        if request.mode == "document":
+            return answer_document_question(request.question)
         return answer_question(db, request.question)
     except UnsafeSQLError as e:
         raise HTTPException(status_code=400, detail=f"Query blocked for safety: {e}")
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
     except DBAPIError:
         raise HTTPException(status_code=400, detail="Could not run the generated query. Try rephrasing.")
     except ModelRateLimitError:
