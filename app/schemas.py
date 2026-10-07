@@ -1,6 +1,6 @@
 import datetime
 from decimal import Decimal
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -37,9 +37,11 @@ class AnalyticsSummary(BaseModel):
 
 class ChatRequest(BaseModel):
     question: str = Field(min_length=3, max_length=500)
+    mode: Literal["data", "document"] = "data"
 
 
 class ChatResponse(BaseModel):
     answer: str
-    sql: str
-    rows: list[dict[str, Any]]
+    sql: str | None = None
+    rows: list[dict[str, Any]] | None = None
+    sources: list[str] | None = None
