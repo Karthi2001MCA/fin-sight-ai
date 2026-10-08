@@ -1,0 +1,7 @@
+.venv/
+.env
+.git/
+faiss_index/
+__pycache__/
+.pytest_cache/
+tests/
