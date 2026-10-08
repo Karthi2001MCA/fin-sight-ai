@@ -12,3 +12,4 @@ fastembed==0.8.1
 pypdf==6.19.0
 scikit-learn==1.9.1
 streamlit==1.65.0
+pytest==9.1.1
