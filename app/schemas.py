@@ -45,3 +45,13 @@ class ChatResponse(BaseModel):
     sql: str | None = None
     rows: list[dict[str, Any]] | None = None
     sources: list[str] | None = None
+
+
+class AnomalyOut(BaseModel):
+    id: int
+    date: datetime.date
+    description: str
+    category: str
+    merchant: str
+    amount: Decimal
+    anomaly_score: float
